@@ -1,9 +1,11 @@
+import { NavBar } from './components/NavBar';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <h1>APP REACT MOVIES</h1>
+      <NavBar />
+      <h1>prueba</h1>
     </div>
   );
 }
