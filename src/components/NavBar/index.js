@@ -1,8 +1,8 @@
-import Button from 'react-bootstrap/Button';
+// import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
+// import Form from 'react-bootstrap/Form';
+import { Nav, Navbar } from 'react-bootstrap';
+
 
 
 const NavBar = () => {
@@ -20,7 +20,7 @@ const NavBar = () => {
             <Nav.Link href="#action1">Peliculas Populares</Nav.Link>
             <Nav.Link href="#action2">Peliculas Mejor Puntuadas</Nav.Link>
           </Nav>
-          <Form className="d-flex">
+          {/* <Form className="d-flex">
             <Form.Control
               type="search"
               placeholder="Search"
@@ -28,7 +28,7 @@ const NavBar = () => {
               aria-label="Search"
             />
             <Button variant="outline-secondary">Search</Button>
-          </Form>
+          </Form> */}
         </Navbar.Collapse>
       </Container>
     </Navbar>
