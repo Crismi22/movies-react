@@ -1,11 +1,13 @@
 import React from "react";
-import Movies from "../../pages/movies";
+import MoviesResults from "../../pages/movies/MoviesResults";
+
 
 export const Home = () => {
   return(
     <div>
-      <Movies />
-      <h2>aca dentro de home el carrusel?</h2>
+        <h2>aca dentro de home el carrusel?</h2>
+      <MoviesResults />
+    
     </div>
   )
 } 

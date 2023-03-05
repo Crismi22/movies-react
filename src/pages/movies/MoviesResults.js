@@ -2,22 +2,23 @@ import React, { useState, useEffect } from 'react';
 import { API_KEY, URL_BASE } from '../../utils/constantes';
 import Search from '../search';
 
-const Mejores = () => {
+const MoviesResults = () => {
   const [results, setResults] = useState([]);
 
   useEffect(() => {
     const fetchResults = async () => {
-      const response = await fetch(`${URL_BASE}/movie/top_rated?api_key=${API_KEY}`);
+      const response = await fetch(`${URL_BASE}/movie/popular?api_key=${API_KEY}`);
       const data = await response.json();
       setResults(data.results);
     };
-  
+
     fetchResults();
   }, []);
 
+
+
   return (
     <>
-    <h2>Peliculas Mejores Puntuadas</h2>
     <Search />
     <div style={{ display: 'grid', gridTemplateColumns: '25% 25% 25% 25%', gridAutoRows: 'auto' }}>
       {results.map(result => (
@@ -32,4 +33,4 @@ const Mejores = () => {
   );
 };
 
-export default Mejores
+export default MoviesResults

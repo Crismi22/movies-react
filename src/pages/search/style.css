@@ -1,0 +1,8 @@
+.input-search{
+  max-width: 50%;
+  display: flex;
+  align-items: center;
+}
+.btn-search{
+  width: 50%;
+}
