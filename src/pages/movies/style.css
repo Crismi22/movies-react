@@ -1,0 +1,5 @@
+.dark-theme{
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,66,1) 25%, rgba(112,22,179,1) 53%, rgba(64,44,146,1) 100%);
+  color: #fff
+}

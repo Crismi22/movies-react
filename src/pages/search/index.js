@@ -49,7 +49,7 @@ const Search = () => {
         }}
       >
         {searchResults.map((result) => (
-          <div key={result.id}>
+          <div key={result.id} className="movie-card-result">
             <img
               src={`https://image.tmdb.org/t/p/w500${result.poster_path}`}
               style={{ width: '100%', height: 'auto', objectFit: 'cover' }}
