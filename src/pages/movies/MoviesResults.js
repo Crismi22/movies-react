@@ -1,25 +1,26 @@
 import React, { useState, useEffect } from 'react';
 import { API_KEY, URL_BASE } from '../../utils/constantes';
-import Search from '../search';
+// import Search from '../search';
 
-const MoviesResults = () => {
+const MoviesResults = ({ movies }) => {
   const [results, setResults] = useState([]);
 
   useEffect(() => {
     const fetchResults = async () => {
-      const response = await fetch(`${URL_BASE}/movie/popular?api_key=${API_KEY}`);
+      const response = await fetch(`${URL_BASE}/discover/movie?sort_by=popularity.desc&api_key=${API_KEY}&page=1`);
       const data = await response.json();
       setResults(data.results);
-    };
+      console.log(data.results)
+    }; 
 
     fetchResults();
-  }, []);
+  }, [movies]);
 
 
 
   return (
     <>
-    <Search />
+    {/* <Search /> */}
     <div style={{ display: 'grid', gridTemplateColumns: '25% 25% 25% 25%', gridAutoRows: 'auto' }}>
       {results.map(result => (
         <div key={result.id} style={{ width: '100%', height: 'auto', padding: '10px' }}>

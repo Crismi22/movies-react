@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { API_KEY, URL_BASE } from '../../utils/constantes';
-import Search from '../search';
+// import Search from '../search';
 import './style.css';
 
 const Mejores = () => {
@@ -19,7 +19,7 @@ const Mejores = () => {
   return (
     <div className='dark-theme ligth-theme'>
       <h2>Peliculas Mejores Puntuadas</h2>
-      <Search />
+      {/* <Search /> */}
       <div style={{ display: 'grid', gridTemplateColumns: '25% 25% 25% 25%', gridAutoRows: 'auto' }}>
         {results.map(result => (
           <div key={result.id} style={{ width: '100%', height: 'auto', padding: '10px' }}>

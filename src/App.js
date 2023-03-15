@@ -1,10 +1,11 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import { NavBar } from "./components/NavBar";
-import { Home } from "./components/Home";
+import  Home  from "./components/Home";
 import Footer from "./components/Footer";
 import Populares from "./pages/movies/Populares";
 import Mejores from "./pages/movies/Mejores";
+// import Error404 from "./pages/movies/Error404";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/populares" element={<Populares />} />
           <Route path="/mejores" element={<Mejores />} />
+          {/* <Route path="*" element={<Error404 />} /> */}
         </Routes>
         <Footer />
       </div>
