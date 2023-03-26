@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import { NavBar } from "./components/NavBar";
-import { Home } from "./components/Home";
+import { Home } from "./pages/Home";
 import Footer from "./components/Footer";
 import Populares from "./pages/movies/Populares";
 import Mejores from "./pages/movies/Mejores";
