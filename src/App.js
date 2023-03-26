@@ -1,7 +1,11 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import { NavBar } from "./components/NavBar";
+<<<<<<< HEAD
 import  Home  from "./components/Home";
+=======
+import { Home } from "./pages/Home";
+>>>>>>> ef3f8e1445cda24b35b2294a7aa885dece557868
 import Footer from "./components/Footer";
 import Populares from "./pages/movies/Populares";
 import Mejores from "./pages/movies/Mejores";
