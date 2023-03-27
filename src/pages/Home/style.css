@@ -1,0 +1,10 @@
+.header-section {
+  display: flex;
+  align-items: center;
+  margin: 25px;
+  text-align: left;
+}
+
+.header-section h2 {
+  margin-right: 25px;
+}
