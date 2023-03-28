@@ -10,7 +10,7 @@ import MovieDetails from "./pages/movies/MovieDetails";
 function App() {
   return (
     <BrowserRouter>
-      <div className="App">
+      <div className="App"> 
         <NavBar />
         <Routes>
           <Route path="/" element={<Home />} />
