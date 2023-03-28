@@ -1,4 +1,19 @@
+.slide {
+  position: relative;
+}
+
 .slide img {
   width: 100%;
   object-position: 0% center;
+  object-fit: cover;
+}
+
+.slide .desc-container {
+  padding: 20px;
+  position: absolute;
+  left: 25px;
+  top: 25px;
+  width: 75%;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.315);
 }
