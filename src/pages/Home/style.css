@@ -8,3 +8,12 @@
 .header-section h2 {
   margin-right: 25px;
 }
+
+.header-section .link-to-page {
+  text-decoration: none;
+  color: #ff005a;
+}
+
+.header-section .link-to-page:hover {
+  color: #8400ff;
+}

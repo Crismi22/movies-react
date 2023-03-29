@@ -8,12 +8,37 @@
   object-fit: cover;
 }
 
-.slide .desc-container {
-  padding: 20px;
+.slide .container {
   position: absolute;
-  left: 25px;
-  top: 25px;
-  width: 75%;
+  left: 1.563rem;
+  top: 10%;
+  width: 50%;
+}
+
+.slide .desc-container {
+  margin-bottom: 1.875rem;
+  padding: 1.25rem;
   color: white;
-  background-color: rgba(0, 0, 0, 0.315);
+  background-color: rgba(0, 0, 0, 0.452);
+}
+
+.slide .desc-container h2 {
+  font-size: 1.87rem;
+}
+
+.slide .desc-container p {
+  font-size: 1rem;
+}
+
+.slide .link-to-detail {
+  font-size: 1rem;
+  color: #ff005a;
+  text-decoration: none;
+  background-color: rgb(0, 0, 0);
+  padding: 0.625rem 1.563rem;
+  border-radius: 0.625rem;
+}
+
+.slide .link-to-detail:hover {
+  color: #8400ff;
 }
