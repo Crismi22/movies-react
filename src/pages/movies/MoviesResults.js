@@ -24,7 +24,7 @@ const MoviesResults = () => {
     };
 
     fetchResults();
-  }, [searchTerm]);
+  }, [results, searchTerm]);
 
   return (
     <>

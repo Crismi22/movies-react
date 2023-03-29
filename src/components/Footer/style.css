@@ -1,0 +1,32 @@
+.container{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+footer {
+  padding: 30px 0;
+  
+}
+/* 
+no me deja cambiar la fuente al h3 */
+
+title-footer {
+  font-size: 28px;
+  margin-bottom: 20px;
+  font-family: 'Fasthand', cursive !important; 
+}
+
+footer p {
+  font-size: 18px;
+  margin-bottom: 0;
+}
+
+a {
+  color: #fff !important;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover{
+  color: blueviolet;
+}
