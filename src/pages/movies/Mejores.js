@@ -35,7 +35,7 @@ const Mejores = () => {
           onChange={(e) => setSearchTerm(e.target.value)}
           style={{ width: "50%" }}
         />
-        <button onClick={() => setSearchTerm("")}>Buscar</button>
+        {/* <button onClick={() => setSearchTerm("")}>Buscar</button> */}
       </div>
       <div
         style={{
@@ -49,7 +49,7 @@ const Mejores = () => {
             <div
               className="card-movies"
               key={result.id}
-              style={{ width: "100%" }}>
+              style={{ width: "95%" }}>
 
               <img
                 src={`https://image.tmdb.org/t/p/w500${result.poster_path}`}

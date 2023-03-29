@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { API_KEY, URL_BASE } from "../../utils/constantes";
 
+
 const MovieDetails = () => {
   const { id } = useParams();
   const [movie, setMovie] = useState(null);
@@ -24,6 +25,14 @@ const MovieDetails = () => {
     return <div>Loading...</div>;
   }
 
+  const getStars = (voteAverage) => {
+    const numStars = Math.round(voteAverage / 2);
+    return "★".repeat(numStars);
+  };
+
+  const starRating = Math.floor(movie.vote_average / 2);
+
+
   return (
     <div
     className="movie-details"
@@ -40,6 +49,10 @@ const MovieDetails = () => {
       <div className="movie-details-info">
         <h2>{movie.title}</h2>
         <p>{movie.overview}</p>
+        <div className="movie-details-rating">
+          <span>{getStars(movie.vote_average)}</span>
+          <span>{starRating}/5</span>
+        </div>
       </div>
     </div>
   </div>
