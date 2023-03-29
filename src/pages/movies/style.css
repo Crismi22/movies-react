@@ -27,11 +27,14 @@
   transform: scale(1.05);
 }
 
+a {
+  text-decoration: none !important;
+}
+
 .card-movies h2 {
   color: white;
   font-size: 1.5rem;
   margin-top: 10px;
-  text-decoration: none;
 }
 
 .card-movies::before {
