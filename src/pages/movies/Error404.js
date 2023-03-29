@@ -1,14 +1,20 @@
 import React from 'react';
-import NoFound404 from '/src/NoFound404.jpeg';
+import "./style404.css";
+import { Link } from "react-router-dom";
 
 const Error404 = () => {
   return (
-    <div>
-      <h1>404 Error</h1>
-      <img src={NoFound404} alt="404" />
-      <p>Sorry, the page you are looking for does not exist.</p>
-    </div>
+  	<div id="notfound">
+		<div className="notfound no-nav-footer">
+			<div className="notfound-404">
+				<h1>404</h1>
+				<h2>Page not found</h2>
+			</div>
+      <Link to={`/`}>Home</Link>
+		</div>
+	</div>
   );
 };
 
 export default Error404;
+ 

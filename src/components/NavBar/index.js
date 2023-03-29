@@ -1,5 +1,6 @@
 import Container from "react-bootstrap/Container";
 import { Nav, Navbar } from "react-bootstrap";
+// import Search from "../../pages/search";
 
 
 const NavBar = () => {
@@ -19,7 +20,7 @@ const NavBar = () => {
             <Nav.Link href="/mejores">Peliculas Mejor Puntuadas</Nav.Link>
           </Nav>
 
-        
+        {/* <Search /> */}
         </Navbar.Collapse>
       </Container>
     </Navbar>

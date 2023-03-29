@@ -1,5 +1,81 @@
+/* modo oscuro default del proyecto | fondo gradiente*/
+
 .dark-theme{
   background: rgb(2,0,36);
   background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,66,1) 25%, rgba(112,22,179,1) 53%, rgba(64,44,146,1) 100%);
   color: #fff
+}
+
+/* estilado de cards movies de resultados */
+
+.card-movies {
+  /* border: 1px solid rgba(255, 255, 255, 0.1); */
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  background-color: black;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+  width: auto;
+  height: 540px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+ 
+}
+
+.card-movies:hover {
+  transform: scale(1.05);
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.card-movies h2 {
+  color: white;
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+
+.card-movies::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  bottom: -10px;
+  left: -10px;
+  right: -10px;
+  background-color: rgba(255, 255, 255, 0.05);
+  filter: blur(20px);
+  z-index: -1;
+}
+
+/* estilado de cada pelicula y detalle */
+
+.movie-details {
+  height: 100vh;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.movie-details-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.movie-details-poster {
+  width: 30%;
+  max-width: 300px;
+  margin-right: 2rem;
+}
+
+.movie-details-info {
+  color: white;
+  max-width: 50%;
+  background-color: rgba(14, 13, 13, 0.308);
+  
 }

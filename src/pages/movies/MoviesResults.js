@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { API_KEY, URL_BASE } from "../../utils/constantes";
+import { Link } from "react-router-dom";
+import './style.css';
+
 
 const MoviesResults = () => {
   const [results, setResults] = useState([]);
@@ -15,7 +18,9 @@ const MoviesResults = () => {
 
       const response = await fetch(url);
       const data = await response.json();
+      console.log(data) //verifica los datos recibidos de la Api
       setResults(data.results);
+      console.log(results) //verifica los resultados almacenados en el estado
     };
 
     fetchResults();
@@ -23,7 +28,7 @@ const MoviesResults = () => {
 
   return (
     <>
-      <div style={{ display: "flex", justifyContent: "center" }}>
+      <div className='dark-theme ligth-theme' style={{ display: "flex", justifyContent: "center" }}>
         <input
           type="text"
           placeholder="Buscar películas"
@@ -31,7 +36,7 @@ const MoviesResults = () => {
           onChange={(e) => setSearchTerm(e.target.value)}
           style={{ width: "50%" }}
         />
-        <button onClick={() => setSearchTerm("")}>Buscar</button>
+        {/* <button onClick={() => setSearchTerm("")}>Buscar</button> */}
       </div>
       <div
         style={{
@@ -41,17 +46,20 @@ const MoviesResults = () => {
         }}
       >
         {results.map((result) => (
-          <div
-            key={result.id}
-            style={{ width: "100%", height: "auto", padding: "10px" }}
-          >
-            <img
-              src={`https://image.tmdb.org/t/p/w500${result.poster_path}`}
-              style={{ width: "100%", height: "auto", objectFit: "cover" }}
-              alt={result.title}
-            />
-            <h2>{result.title}</h2>
-          </div>
+          <Link key={result.id} to={`/movie/${result.id}`}>
+            <div
+              className="card-movies"
+              key={result.id}
+              style={{ width: "95%" }}>
+
+              <img
+                src={`https://image.tmdb.org/t/p/w500${result.poster_path}`}
+                style={{ width: "100%", height: "auto", objectFit: "cover" }}
+                alt={result.title}
+              />
+              <h2>{result.title}</h2>
+            </div>
+          </Link>
         ))}
       </div>
     </>
