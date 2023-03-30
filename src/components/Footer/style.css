@@ -1,11 +1,10 @@
-.container{
+.container {
   display: flex;
   flex-wrap: wrap;
 }
 
 footer {
   padding: 30px 0;
-  
 }
 /* 
 no me deja cambiar la fuente al h3 */
@@ -13,7 +12,7 @@ no me deja cambiar la fuente al h3 */
 title-footer {
   font-size: 28px;
   margin-bottom: 20px;
-  font-family: 'Fasthand', cursive !important; 
+  font-family: "Fasthand", cursive !important;
 }
 
 footer p {
@@ -27,6 +26,6 @@ a {
   font-weight: bold;
 }
 
-footer a:hover{
+footer a:hover {
   color: blueviolet;
 }

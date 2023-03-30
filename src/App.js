@@ -8,12 +8,10 @@ import Mejores from "./pages/movies/Mejores";
 import MovieDetails from "./pages/movies/MovieDetails";
 import Error404 from "./pages/movies/Error404";
 
-
-
 function App() {
   return (
     <BrowserRouter>
-      <div className="App"> 
+      <div className="App dark-theme ligth-theme">
         <NavBar />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -22,7 +20,6 @@ function App() {
           <Route path="/movie/:id" element={<MovieDetails />} />
 
           <Route path="*" element={<Error404 />} />
-
         </Routes>
         <Footer />
       </div>
