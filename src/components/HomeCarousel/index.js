@@ -12,7 +12,7 @@ function HomeCarousel({ movies, isNowPlaying }) {
         autoplay: true,
         pauseOnHover: true,
         rewind: true,
-        height: "500px",
+        height: "auto",
         gap: "1rem",
         arrows: false,
         interval: 5000,
@@ -28,7 +28,7 @@ function HomeCarousel({ movies, isNowPlaying }) {
             <div className="container">
               <div className="desc-container">
                 <h2>{movie.title}</h2>
-                <p>{movie.overview}</p>
+                <p className="hide-on-mobile">{movie.overview}</p>
               </div>
               <Link className="link-to-detail" to={`/movie/${movie.id}`}>
                 Ver detalles <FaAngleRight />
@@ -47,6 +47,11 @@ function HomeCarousel({ movies, isNowPlaying }) {
           perPage: 5,
           pagination: false,
           width: "100%",
+          breakpoints: {
+            768: {
+              perPage: 3
+            }
+          }
         }}
       >
         {movies?.results?.map((movie) => (
