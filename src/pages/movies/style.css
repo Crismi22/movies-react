@@ -15,7 +15,6 @@
 /* estilado de cards movies de resultados */
 
 .card-movies {
-  /* border: 1px solid rgba(255, 255, 255, 0.1); */
   border-radius: 5px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   background-color: black;
@@ -23,7 +22,7 @@
   overflow: hidden;
   transition: transform 0.3s ease-in-out;
   width: auto;
-  height: 540px;
+  height: auto;
   margin-bottom: 20px;
   margin-top: 20px;
 }
