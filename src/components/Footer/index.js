@@ -6,7 +6,9 @@ const Footer = () => {
   return (
     <footer className="bg-dark text-white" style={{ marginTop: "50px" }}>
       <div className="container py-3">
-        <h3 className="text-center">Realizado por Cris y Caro</h3>
+        <h3 className="text-center" styles={{ fontSize: "1rem" }}>
+          Realizado por Cris y Caro
+        </h3>
         <div className="d-flex justify-content-center">
           <div className="d-flex align-items-center justify-content-between w-50 me-5">
             <a
