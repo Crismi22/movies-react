@@ -17,3 +17,12 @@
 .header-section .link-to-page:hover {
   color: #8400ff;
 }
+
+@media screen and (max-width: 768px) {
+  h2{
+    font-size: 1rem;
+  }
+  .header-section{
+    margin: 25px 5px;
+  }
+}
