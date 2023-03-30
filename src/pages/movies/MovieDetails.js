@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { Loader } from "../../components/Loader";
 import { API_KEY, URL_BASE } from "../../utils/constantes";
 
 
@@ -22,7 +23,7 @@ const MovieDetails = () => {
   }, [id]); 
 
   if (!movie) {
-    return <div>Loading...</div>;
+    return <div><Loader /></div>;
   }
 
   const getStars = (voteAverage) => {

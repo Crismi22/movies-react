@@ -35,7 +35,7 @@ const Mejores = () => {
           onChange={(e) => setSearchTerm(e.target.value)}
           style={{ width: "50%" }}
         />
-        {/* <button onClick={() => setSearchTerm("")}>Buscar</button> */}
+ 
       </div>
       <div
         style={{
@@ -56,7 +56,7 @@ const Mejores = () => {
                 style={{ width: "100%", height: "auto", objectFit: "cover" }}
                 alt={result.title}
               />
-              <h2>{result.title}</h2>
+         
             </div>
           </Link>
         ))}

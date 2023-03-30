@@ -18,9 +18,9 @@ const MoviesResults = () => {
 
       const response = await fetch(url);
       const data = await response.json();
-      console.log(data) //verifica los datos recibidos de la Api
+      // console.log(data) //verifica los datos recibidos de la Api
       setResults(data.results);
-      console.log(results) //verifica los resultados almacenados en el estado
+      // console.log(results) //verifica los resultados almacenados en el estado
     };
 
     fetchResults();
@@ -36,7 +36,7 @@ const MoviesResults = () => {
           onChange={(e) => setSearchTerm(e.target.value)}
           style={{ width: "50%" }}
         />
-        {/* <button onClick={() => setSearchTerm("")}>Buscar</button> */}
+    
       </div>
       <div
         style={{
@@ -57,7 +57,7 @@ const MoviesResults = () => {
                 style={{ width: "100%", height: "auto", objectFit: "cover" }}
                 alt={result.title}
               />
-              <h2>{result.title}</h2>
+              
             </div>
           </Link>
         ))}
