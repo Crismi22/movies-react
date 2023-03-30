@@ -19,7 +19,7 @@
   margin-bottom: 1.875rem;
   padding: 1.25rem;
   color: white;
-  background-color: rgba(0, 0, 0, 0.452);
+  background-color: rgba(0, 0, 0, 0.719);
 }
 
 .slide .desc-container h2 {
@@ -41,4 +41,35 @@
 
 .slide .link-to-detail:hover {
   color: #8400ff;
+}
+
+.carousel-container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.splide__arrow--next {
+  right: -50px;
+  background-color: transparent;
+}
+
+.splide__arrow--prev {
+  left: -50px;
+  background-color: transparent;
+}
+
+.splide__arrow svg {
+  fill: #ff005a;
+}
+
+.splide__arrow svg:hover {
+  fill: #8400ff;
+}
+
+.splide__pagination__page {
+  background-color: #8400ff8c;
+}
+
+.splide__pagination__page.is-active {
+  background-color: #ff005a;
 }

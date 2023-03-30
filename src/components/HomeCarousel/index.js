@@ -39,27 +39,30 @@ function HomeCarousel({ movies, isNowPlaying }) {
       ))}
     </Splide>
   ) : (
-    <Splide
-      aria-label="Movies"
-      options={{
-        gap: "1rem",
-        perPage: 5,
-        pagination: false,
-      }}
-    >
-      {movies?.results?.map((movie) => (
-        <SplideSlide key={movie.id}>
-          <Link to={`/movie/${movie.id}`}>
-            <div className="slide">
-              <img
-                src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
-                alt="film poster"
-              />
-            </div>
-          </Link>
-        </SplideSlide>
-      ))}
-    </Splide>
+    <div className="carousel-container">
+      <Splide
+        aria-label="Movies"
+        options={{
+          gap: "1rem",
+          perPage: 5,
+          pagination: false,
+          width: "100%",
+        }}
+      >
+        {movies?.results?.map((movie) => (
+          <SplideSlide key={movie.id}>
+            <Link to={`/movie/${movie.id}`}>
+              <div className="slide">
+                <img
+                  src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
+                  alt="film poster"
+                />
+              </div>
+            </Link>
+          </SplideSlide>
+        ))}
+      </Splide>
+    </div>
   );
 }
 

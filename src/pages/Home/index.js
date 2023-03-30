@@ -57,7 +57,7 @@ export const Home = () => {
   // /API call para peliculas mejor puntuadas
 
   return (
-    <>
+    <div className="dark-theme ligth-theme">
       {nowPlayingMoviesComplete &&
       popularMoviesComplete &&
       topRatedMoviesComplete ? (
@@ -81,6 +81,6 @@ export const Home = () => {
       ) : (
         <Loader />
       )}
-    </>
+    </div>
   );
 };
