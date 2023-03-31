@@ -114,20 +114,19 @@
     margin-bottom: 1rem;
     width: 80%;
   }
+
+  /* se oculta flechas para que no haga scroll inecesario */
+  .splide__arrow {
+    display: none;
+  }
  
-
-} 
 /* los carruseles secundarios */
-
-@media screen and (max-width: 768px) {
   .carousel-container {
     width: 100%;
+    margin-right: 10%;
   }
   .carousel-container .splide__slide {
     width: calc(100% / 3);
-  }
-  .carousel-container .splide__arrow {
-    display: block;
   }
 }
 
