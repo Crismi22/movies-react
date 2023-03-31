@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Pagination from "../../components/Paginador";
 import "./style.css";
 import topRated from "../../assets/rating.png";
+import placeholder from "../../assets/no-image-placeholder.png";
 
 const Mejores = () => {
   const [results, setResults] = useState([]);
@@ -60,11 +61,15 @@ const Mejores = () => {
               key={result.id}
               style={{ width: "95%" }}
             >
-              <img
-                src={`https://image.tmdb.org/t/p/w500${result.poster_path}`}
-                style={{ width: "100%", height: "auto", objectFit: "cover" }}
-                alt={result.title}
-              />
+              {result.poster_path ? (
+                <img
+                  src={`https://image.tmdb.org/t/p/w500${result.poster_path}`}
+                  style={{ width: "100%", height: "auto", objectFit: "cover" }}
+                  alt={result.title}
+                />
+              ) : (
+                <img src={placeholder} alt="film poster not available" />
+              )}
             </div>
           </Link>
         ))}
