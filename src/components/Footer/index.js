@@ -4,12 +4,17 @@ import { FaRegCopyright } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-dark text-white" style={{ marginTop: "50px" }}>
+    <footer className="bg-dark text-white">
       <div className="container py-3">
-      <span style={{ fontSize: '28px', fontFamily: 'Fasthand' }}>Realizado por Cris y Caro</span>
+        <span style={{ fontSize: "28px", fontFamily: "Fasthand" }}>
+          Realizado por Cris y Caro
+        </span>
 
-        <div className="d-flex justify-content-center" style={{ marginTop: "15px" }}>
-          <div className="d-flex align-items-center justify-content-between w-50 me-5" >
+        <div
+          className="d-flex justify-content-center"
+          style={{ marginTop: "15px" }}
+        >
+          <div className="d-flex align-items-center justify-content-between w-50 me-5">
             <a
               href="https://www.linkedin.com/in/cristinabenitezcb/"
               className="d-flex align-items-center text-decoration-none"
@@ -42,9 +47,9 @@ const Footer = () => {
       <span>
         {" "}
         <i>
-          <FaRegCopyright /> 
-        </i> 
-         Copyright 2023
+          <FaRegCopyright />
+        </i>
+        Copyright 2023
       </span>
     </footer>
   );
