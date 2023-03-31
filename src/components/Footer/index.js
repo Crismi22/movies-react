@@ -4,10 +4,12 @@ import { FaRegCopyright } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-dark text-white" style={{ marginTop: "30px" }}>
+    <footer className="bg-dark text-white">
       <div className="container py-3">
         <div className="d-flex flex-column flex-md-row justify-content-center align-items-center">
-          <span style={{ fontSize: '28px', fontFamily: 'Fasthand' }}>Realizado por Cris y Caro</span>
+          <span style={{ fontSize: "28px", fontFamily: "Fasthand" }}>
+            Realizado por Cris y Caro
+          </span>
 
           <div className="d-flex flex-wrap justify-content-center justify-content-md-between align-items-center mt-3 mt-md-0">
             <a

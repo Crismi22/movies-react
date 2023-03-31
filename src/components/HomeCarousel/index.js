@@ -3,6 +3,7 @@ import "@splidejs/react-splide/css";
 import "./style.css";
 import { Link } from "react-router-dom";
 import { FaAngleRight } from "react-icons/fa";
+import placeholder from "../../assets/no-image-placeholder.png";
 
 function HomeCarousel({ movies, isNowPlaying }) {
   return isNowPlaying ? (
@@ -21,10 +22,14 @@ function HomeCarousel({ movies, isNowPlaying }) {
       {movies?.results?.map((movie) => (
         <SplideSlide key={movie.id}>
           <div className="slide">
-            <img
-              src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`}
-              alt="film poster"
-            />
+            {movie.backdrop_path ? (
+              <img
+                src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`}
+                alt="film poster"
+              />
+            ) : (
+              <img src={placeholder} alt="film poster not available" />
+            )}
             <div className="container">
               <div className="desc-container">
                 <h2>{movie.title}</h2>
@@ -49,19 +54,23 @@ function HomeCarousel({ movies, isNowPlaying }) {
           width: "100%",
           breakpoints: {
             768: {
-              perPage: 3
-            }
-          }
+              perPage: 3,
+            },
+          },
         }}
       >
         {movies?.results?.map((movie) => (
           <SplideSlide key={movie.id}>
             <Link to={`/movie/${movie.id}`}>
               <div className="slide">
-                <img
-                  src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
-                  alt="film poster"
-                />
+                {movie.poster_path ? (
+                  <img
+                    src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
+                    alt="film poster"
+                  />
+                ) : (
+                  <img src={placeholder} alt="film poster not available" />
+                )}
               </div>
             </Link>
           </SplideSlide>
