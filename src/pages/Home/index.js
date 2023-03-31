@@ -61,7 +61,7 @@ export const Home = () => {
       {nowPlayingMoviesComplete &&
       popularMoviesComplete &&
       topRatedMoviesComplete ? (
-        <>
+        <div className="home">
           <HomeCarousel movies={nowPlayingMovies} isNowPlaying={true} />
           <div className="header-section">
             <h2>Películas populares</h2>
@@ -77,7 +77,7 @@ export const Home = () => {
             </Link>
           </div>
           <HomeCarousel movies={topRatedMovies} isNowPlaying={false} />
-        </>
+        </div>
       ) : (
         <Loader />
       )}
